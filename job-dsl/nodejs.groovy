@@ -1,7 +1,7 @@
 job('My NodeJS First Job DSL') {
     scm {
         git('https://github.com/youhana-sobhy/docker-demo.git') {  node -> // is hudson.plugins.git.GitSCM
-            node / gitConfigName('DSL User')
+            node / gitConfigName('DSL User_')
             node / gitConfigEmail('jenkins-dsl@newtech.academy')
         }
     }
@@ -14,6 +14,7 @@ job('My NodeJS First Job DSL') {
 	}
 	steps{
 		shell('npm install')
+		shell('date')
 	}
 	
 }
